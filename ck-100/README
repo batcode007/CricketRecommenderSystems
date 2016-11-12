@@ -1,0 +1,70 @@
+SUMMARY & USAGE LICENSE
+=============================================
+
+CricketerRatings data sets is collected by the Naman Gupta (2013141), Mohammed Nawazish (2013061) and Samir Kher (2013087), students of IIITD
+ 
+This data set consists of:
+	* _____ ratings (1-5) from ___ users on 42 cricketers. 
+	* Each user has rated at least 20 cricketer. 
+        * Simple demographic info for the users (age, gender,zip)
+
+
+Researchers involved cannot guarantee the correctness of the data,
+its suitability for any particular purpose, or the validity of results
+based on the use of the data set.  
+
+If you have any further questions or comments, please mail us on
+<naman13141@iiitd.ac.in, nawazish13061@iiitd.ac.in, samir13087@iiitd.ac.in>. 
+
+
+
+
+DETAILED DESCRIPTIONS OF DATA FILES
+==============================================
+
+Here are brief descriptions of the data.
+
+u.data     -- The full u data set, ______ ratings by _____ users on 42 items.
+              Each user has rated at least 20 cricketers.  Users and items are
+              numbered consecutively from 1.  The data is randomly
+              ordered. This is a tab separated list of 
+	         user id | item id | rating. 
+
+u.info     -- The number of users, items, and ratings in the u data set.
+
+u.item     -- Information about the items (cricketers); this is a tab separated
+              list of
+              cricketer id | cricketer name | Age | Indian |
+              Pakistani | South African | Australian | West-Indian | Sri-Lankan |
+              Bowler | Batsman | WicketKeeper | 
+              The last 03 fields are the types of player and the 06 fields before that depicts the nationality, a 1 indicates the cricketer
+              belongs to that field, a 0 indicates it doesn't
+              The movie ids are the ones used in the u.data data set.
+
+u.user     -- Demographic information about the users; this is a tab
+              separated list of
+              user id | name  |  age | gender | zip code
+              The user ids are the ones used in the u.data data set.
+
+
+u1.base    -- The data sets u1.base and u1.test through u5.base and u5.test
+u1.test       are 80%/20% splits of the u data into training and test data.
+u2.base       Each of u1, ..., u5 have disjoint test sets; this if for
+u2.test       5 fold cross validation (where you repeat your experiment
+u3.base       with each training and test set and average the results).
+u3.test       These data sets can be generated from u.data by mku.sh.
+u4.base
+u4.test
+u5.base
+u5.test
+
+ua.base    -- The data sets ua.base, ua.test, ub.base, and ub.test
+ua.test       split the u data into a training set and a test set with
+ub.base       exactly 10 ratings per user in the test set.  The sets
+ub.test       ua.test and ub.test are disjoint.  These data sets can
+              be generated from u.data by mku.sh.
+
+allbut.pl  -- The script that generates training and test sets where
+              all but n of a users ratings are in the training data.
+
+mku.sh     -- A shell script to generate all the u data sets from u.data.
