@@ -4,7 +4,7 @@ SUMMARY & USAGE LICENSE
 CricketerRatings data sets is collected by the Naman Gupta (2013141), Mohammed Nawazish (2013061) and Samir Kher (2013087), students of IIITD
  
 This data set consists of:
-	* 900 ratings (1-5) from 30 users on 42 cricketers. 
+	* 911 ratings (1-5) from 30 users on 42 cricketers. 
 	* Each user has rated at least 15 cricketer. 
         * Simple demographic info for the users (age, gender,zip)
 
@@ -20,7 +20,7 @@ DETAILED DESCRIPTIONS OF DATA FILES
 
 Here are brief descriptions of the data.
 
-u.data     -- The full u data set, 900 ratings by 30 users on 42 items.
+u.data     -- The full u data set, 911 ratings by 30 users on 42 items.
               Each user has rated at least 15 cricketers. Users and items are
               numbered consecutively from 1.  The data is randomly
               ordered. This is a tab separated list of 

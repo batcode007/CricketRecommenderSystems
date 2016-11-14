@@ -60,12 +60,16 @@ class Dataset:
                 e[11]))
         f.close()
 
-    # def load_ratings(self, file, r):
-    #     f = open(file, "r")
-    #     text = f.read()
-    #     entries = re.split("\n+", text)
-    #     for entry in entries:
-    #         e = entry.split('\t', 3)
-    #         if len(e) == 3:
-    #             r.append(Rating(e[0], e[1], e[2]))
-    #     f.close()
+    def load_ratings(self, file, r):
+        print 'check1'
+        f = open(file, "r")
+        text = f.read()
+        print 'check2'
+        entries = re.split("\n+", text)
+        for entry in entries:
+            print 'check3'
+            e = entry.split('|', 3)
+            if len(e) == 3:
+                print 'check4'
+                r.append(Rating(e[0], e[1], e[2]))
+        f.close()
